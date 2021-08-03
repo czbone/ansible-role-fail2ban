@@ -1,0 +1,10 @@
+[sshd]
+enabled = true
+#port = ssh
+maxretry = 5
+findtime = 1m
+bantime = 30m
+filter = sshd
+#banaction = firewallcmd-ipset
+#banaction = firewallcmd-ipset2
+logpath  = {{ logs_sshd }}

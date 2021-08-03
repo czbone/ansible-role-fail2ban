@@ -1,0 +1,13 @@
+[DEFAULT]
+loglevel   = {{ fail2ban_config_loglevel }}
+logtarget  = {{ fail2ban_config_logtarget }}
+destemail  = {{ fail2ban_config_destemail }}
+sendername = {{ fail2ban_config_sendername }}
+sender     = {{ fail2ban_config_sender }}
+ignoreip   = {{ fail2ban_config_ignoreip | join(' ') }}
+bantime    = {{ fail2ban_config_bantime }}
+findtime   = {{ fail2ban_config_findtime }}
+maxretry   = {{ fail2ban_config_maxretry }}
+
+banaction  = firewallcmd-ipset
+banaction_allports = firewallcmd-allports

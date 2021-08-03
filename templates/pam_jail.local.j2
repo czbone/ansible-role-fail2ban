@@ -1,0 +1,9 @@
+[pam]
+enabled = true
+filter = pam-generic
+#port = all
+maxretry = 5
+findtime = 1m
+bantime = 10m
+#banaction = firewallcmd-ipset2
+logpath  = {{ logs_pam }}
