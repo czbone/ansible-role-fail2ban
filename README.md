@@ -22,8 +22,3 @@ Dependencies
 This Ansilbe Role has dependencies to these Ansilbe Roles:
 * 
 
-Example Playbook
-----------------
-
-Example playbooks for this role are located in ´test´ folder:
-* `tests/playbook_fail2ban.yml`
