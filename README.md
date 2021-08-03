@@ -19,6 +19,6 @@ Variables are self speaking or documented in:
 Dependencies
 ------------
 
-This Ansilbe Role has dependencies to these Ansilbe Roles:
-* 
+This Ansilbe Role has no dependencies.
+
 
