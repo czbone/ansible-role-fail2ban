@@ -25,12 +25,3 @@
   notify:
   - Restart Fail2Ban
 
-- name: Copy actions
-  template:
-    src: 'templates/action_{{ item }}.conf.j2'
-    dest: '{{ fail2ban_action_dir }}/{{ item }}.conf'
-  with_items:
-    - firewallcmd-ipset2
-  ignore_errors: yes
-  notify:
-  - Restart Fail2Ban
