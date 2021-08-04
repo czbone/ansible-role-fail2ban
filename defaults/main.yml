@@ -16,6 +16,9 @@ fail2ban_config_bantime: 3600
 fail2ban_config_findtime: 600
 fail2ban_config_maxretry: 3
 
+# SSH config
+fail2ban_ssh_maxretry: 3
+
 # --- Log Paths ---
 logs_sshd: /var/log/secure
 logs_pam: /var/log/secure
