@@ -1,8 +1,8 @@
 [sshd]
 enabled  = true
 maxretry = {{ fail2ban_ssh_maxretry }}
-findtime = 5m
-bantime  = 30m
+findtime = {{ fail2ban_ssh_findtime }}
+bantime  = {{ fail2ban_ssh_bantime }}
 filter   = sshd
 #banaction = firewallcmd-ipset
 #banaction = firewallcmd-ipset2

@@ -12,12 +12,14 @@ fail2ban_config_sendername: fail2ban
 fail2ban_config_ignoreip:
   - 127.0.0.1/8
   - ::1
-fail2ban_config_bantime: 3600
-fail2ban_config_findtime: 600
 fail2ban_config_maxretry: 3
+fail2ban_config_findtime: 600
+fail2ban_config_bantime: 3600
 
 # SSH config
 fail2ban_ssh_maxretry: 3
+fail2ban_ssh_findtime: 5m
+fail2ban_ssh_bantime: 30m
 
 # --- Log Paths ---
 logs_sshd: /var/log/secure
