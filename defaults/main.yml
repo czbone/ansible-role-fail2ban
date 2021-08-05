@@ -6,7 +6,7 @@ fail2ban_action_dir: /etc/fail2ban/action.d
 fail2ban_config_loglevel: 2 #1 (error), 2 (warn), 3 (info), or 4 (debug)
 fail2ban_config_logtarget: SYSLOG #STDOUT STDERR SYSLOG FILE
 fail2ban_config_destemail: fail2ban@example.com
-fail2ban_config_sender: fail2ban@example.com
+fail2ban_config_sender: root@localhost
 fail2ban_config_sendername: fail2ban
 #fail2ban_config_ignoreip: 127.0.0.1/8 1.2.3.4
 fail2ban_config_ignoreip:
