@@ -4,19 +4,18 @@
     #src: templates/fail2ban.local.j2
     src: 'fail2ban.local.j2'
     dest: "{{ fail2ban_jail_dir }}/fail2ban.local"
-  ignore_errors: yes
   notify:
   - Restart Fail2Ban
 
-- name: Copy filters
-  template:
-    #src: templates/{{ item }}_filter.conf.j2
-    src: '{{ item }}_filter.conf.j2'
-    dest: "{{ fail2ban_jail_dir }}/{{ item }}.conf"
-  with_items: "{{ fail2ban_modules }}"
-  ignore_errors: yes
-  notify:
-  - Restart Fail2Ban
+# - name: Copy filters
+#   template:
+#     #src: templates/{{ item }}_filter.conf.j2
+#     src: '{{ item }}_filter.conf.j2'
+#     dest: "{{ fail2ban_jail_dir }}/{{ item }}.conf"
+#   with_items: "{{ fail2ban_modules }}"
+#   #ignore_errors: yes
+#   notify:
+#   - Restart Fail2Ban
     
 - name: Copy jails
   template:
@@ -24,7 +23,6 @@
     src: '{{ item }}_jail.local.j2'
     dest: "{{ fail2ban_jail_dir }}/{{ item }}.local"
   with_items: "{{ fail2ban_modules }}"
-  ignore_errors: yes
   notify:
   - Restart Fail2Ban
 
