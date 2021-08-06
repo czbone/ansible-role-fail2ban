@@ -8,6 +8,7 @@
 
 /var/log/fail2ban.log {
     rotate {{ fail2ban_logrotate.rotate }}
+    compress
     missingok
     notifempty
     postrotate
