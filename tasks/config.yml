@@ -6,14 +6,14 @@
   notify:
   - Restart Fail2Ban
 
-# - name: Copy filters
-#   template:
-#     src: '{{ item }}_filter.conf.j2'
-#     dest: "{{ fail2ban_jail_dir }}/{{ item }}.conf"
-#   with_items: "{{ fail2ban_modules }}"
-#   #ignore_errors: yes
-#   notify:
-#   - Restart Fail2Ban
+- name: Copy filters
+  template:
+    src: 'filter_{{ item }}.conf.j2'
+    dest: "{{ fail2ban_filter_dir }}/{{ item }}.conf"
+  with_items:
+    - 'nginx-access'
+  notify:
+  - Restart Fail2Ban
     
 - name: Copy jails
   template:

@@ -2,10 +2,10 @@
 #
 [nginx]
 enabled  = true
-filter   = nginx-limit-req
-action   = iptables-multiport[name=ReqLimit, port="http,https", protocol=tcp]
-maxretry = 5
+backend  = auto
+port     = http,https
+filter   = nginx-access
+maxretry = 7
 findtime = 5m
-bantime  = 30m
-logpath  = /var/log/nginx/*error.log
-
+bantime  = 10m
+logpath  = /var/log/nginx/*access.log
