@@ -22,8 +22,8 @@ fail2ban_ssh_findtime: 5m
 fail2ban_ssh_bantime: 30m
 
 # --- Log Paths ---
-logs_sshd: /var/log/secure
-logs_pam: /var/log/secure
+fail2ban_logs_ssh: /var/log/secure
+fail2ban_logs_pam: /var/log/secure
 
 # log rotation
 fail2ban_logrotate:

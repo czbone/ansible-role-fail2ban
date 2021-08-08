@@ -1,9 +1,9 @@
 # {{ ansible_managed }}
 #
-[sshd]
+[ssh]
 enabled  = true
 maxretry = {{ fail2ban_ssh_maxretry }}
 findtime = {{ fail2ban_ssh_findtime }}
 bantime  = {{ fail2ban_ssh_bantime }}
 filter   = sshd
-logpath  = {{ logs_sshd }}
+logpath  = {{ fail2ban_logs_ssh }}
