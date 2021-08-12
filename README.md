@@ -23,25 +23,24 @@ This Ansilbe Role has no dependencies.
 How to use
 ------------
 
-* Download zip and unarchive it at `roles` directory in your Ansible project
+##### Download zip and unarchive it at `roles` directory in your Ansible project
 
 ```yml
+# main.yml
 roles:
   - ansible-role-fail2ban
 ```
 
-* Ondemand at launch Ansible
-
-## requirements.yml
+##### Ondemand at launch Ansible
 
 ```yml
+# requirements.yml
 - src: https://github.com/czbone/ansible-role-fail2ban
   name: fail2ban
 ```
 
-## main.yml
-
 ```yml
+# main.yml
 roles:
   - fail2ban
 ```
