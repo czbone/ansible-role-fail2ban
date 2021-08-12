@@ -1,8 +1,7 @@
 Fail2Ban Setup with Ansible
 ===========================
 
-This Ansible Role installs, configures and updates fail2ban for a linux server. The following tasks will be configured:
-* `Install and configure fail2ban`
+This Ansible Role installs, configures and updates fail2ban for a linux server.
 
 Requirements
 ------------
@@ -20,5 +19,16 @@ Dependencies
 ------------
 
 This Ansilbe Role has no dependencies.
+
+How to use
+------------
+
+* Download zip and include your Ansible project
+
+```yml
+task:
+  - ansible-role-fail2ban
+  
+```
 
 
