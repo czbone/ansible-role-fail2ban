@@ -31,7 +31,7 @@ roles:
   - ansible-role-fail2ban
 ```
 
-##### Or ndemand install at launch Ansible
+##### Or ondemand install at launch Ansible
 
 ```yml
 # requirements.yml
